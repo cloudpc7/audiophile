@@ -7,8 +7,6 @@
   
   body {
     height: 100vh;
-    display: grid;
-    justify-content: center;
     font-family: "Manrope", sans-serif;
   }
   
@@ -22,18 +20,20 @@
   .header {
     width: 90rem;
     height: 45.5625rem;
-    display: grid;
-    grid-template-rows: repeat(2, auto);
     padding: 0 10.31rem;
-    background-image: url(/assets/home/desktop/image-hero.jpg);
+    background-image: url(/audiophile/assets/home/desktop/image-hero.jpg);
     background-repeat: no-repeat;
     background-position: right;
-    background-color: #000;
+  }
+
+  .logo {
+    max-width: 8.9375rem;
+    max-height: 1.5625rem;
   }
   
   .navigation {
     height: 6rem;
-    display: grid;
+    display: flex;
     justify-content: space-between;
     border-bottom: 0.0625rem solid rgba(255,255,255, 0.2);
     padding-top: 2.19rem;
@@ -41,7 +41,7 @@
   
   .nav-list {
     display: flex;
-    column-gap: 2.125rem;
+    column-gap: 1.5rem;
   }
   
   .nav-link {
@@ -54,16 +54,13 @@
   }
   
   .cart {
-    grid-row: 1;
-    grid-column: 3;
+    max-width: 1.45831rem;
+    max-height: 1.25rem;
   }
   
   .release-content {
-    width: 23.6875rem;
-    height: 21.625rem;
-    display: grid;
-    gap: 1.5rem;
-    margin-top: 8rem;
+    max-width: 24.875rem;
+    max-height: 21.625rem;
   }
   
   .new {
@@ -76,7 +73,6 @@
   .header-title {
     font-size: 3.5rem;
     font-weight: 700;
-    line-height: 3.625;
     letter-spacing: 0.125rem;
     color: #fff;
   }
@@ -108,18 +104,17 @@
     color: #fff;
   }
   
-  .home-content {
+  /* .home-content {
     display: grid;
     grid-template-rows: repeat(5, auto);
     gap: 10rem;
     margin-top: 7.97rem;
     padding: 0 10.31rem;
-  }
+  } */
   
   
   /* products display section */
-  /* 
-  .home-shop {
+  /* .home-shop {
     height: 17.75rem;
     display: grid;
     grid-template-columns: repeat(3, 21.875rem);
@@ -179,15 +174,15 @@
   
   /* advertising section  */
   
-  .advertised {
+  /* .advertised {
     grid-row: 2;
     display: grid;
     gap: 2.5rem;
   }
-  
+   */
   /* zx9 graphic display ad */
   
-  .zx9-display{
+  /* .zx9-display{
     height: 35rem;
     grid-row: 1;
     display: grid;
@@ -299,7 +294,7 @@
   
   /* audio hero content  */
   
-  .audio-content {
+  /* .audio-content {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 33.75rem 33.75rem;
@@ -327,10 +322,10 @@
   .best-gear {
     border-radius: 0.5rem;
   }
-  
+    */
   /* footer */
   
-  .footer {
+  /* .footer {
     width: 90rem;
     height: 22.8125rem;
     display:flex;
@@ -366,11 +361,11 @@
   .social-media img {
     width: 1.5rem;
     height: 1.5rem;
-  }
+  } */
   
   /* headphones page */
   
-  .products-header {
+  /* .products-header {
     width: 90rem;
     height: 21rem;
     display: flex;
@@ -394,9 +389,9 @@
     letter-spacing: 0.08931rem;
     color: #fff;
   }
-  
+   */
   /* headphones display */
-  
+/*   
   .products-page {
     display: grid;
     grid-template-rows: repeat(3, 35rem);
@@ -458,11 +453,11 @@
     line-height: 1.5625rem;
     opacity: 0.5;
   }
-  
+   */
   
   
   /* speakers page */
-  
+/*   
   .speakers-page {
     display: grid;
     grid-template-rows: 35rem 35rem;
@@ -489,7 +484,7 @@
   
   /* earphones page  */
   
-  .earphones-page {
+  /* .earphones-page {
     display: grid;
     grid-template-rows: 35rem;
     grid-template-columns: 33.75rem 33.75rem;
@@ -503,11 +498,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
+  } */
   
   /* headphone-1 page  */
   
-  .shop-xx99II {
+  /* .shop-xx99II {
     width: 90rem;
     height: 6.0625rem;
     display: flex;
@@ -758,5 +753,4 @@
     grid-template-columns: 33.75rem 33.75rem;
     align-items: center;
     justify-content: space-between;
-  } 
-  
+  }  */
