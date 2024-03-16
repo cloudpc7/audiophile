@@ -1,0 +1,762 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #000;
+  }
+  
+  body {
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    font-family: "Manrope", sans-serif;
+  }
+  
+  .container {
+    width: 90rem;
+    height: 100vh;
+  }
+  
+  /* home page */
+  /* header content */
+  .header {
+    width: 90rem;
+    height: 45.5625rem;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    padding: 0 10.31rem;
+    background-image: url(/assets/home/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: #000;
+  }
+  
+  .navigation {
+    height: 6rem;
+    display: grid;
+    justify-content: space-between;
+    border-bottom: 0.0625rem solid rgba(255,255,255, 0.2);
+    padding-top: 2.19rem;
+  }
+  
+  .nav-list {
+    display: flex;
+    column-gap: 2.125rem;
+  }
+  
+  .nav-link {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    line-height: 1.5625;
+    letter-spacing: 0.125rem;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .cart {
+    grid-row: 1;
+    grid-column: 3;
+  }
+  
+  .release-content {
+    width: 23.6875rem;
+    height: 21.625rem;
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 8rem;
+  }
+  
+  .new {
+    font-size: 0.875rem;
+    letter-spacing: 0.625rem;
+    color: #fff;
+    opacity: 0.4964;
+  }
+  
+  .header-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 3.625;
+    letter-spacing: 0.125rem;
+    color: #fff;
+  }
+  
+  .header-content {
+    font-size: 0.9375rem;
+    line-height: 1.5625;
+    color: #fff;
+    opacity: 0.75;
+  }
+  
+  .btn {
+    width: 10rem;
+    height: 3rem;
+    margin-top: 1rem;
+    background-color: #D87D4A;
+    border: none;
+  }
+  
+  .btn:hover {
+    background-color: #FBAF85;
+    cursor: pointer;
+  }
+  
+  .see-product {
+    font-size: 0.8125rem;
+    letter-spacing: 0.0625rem;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .home-content {
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    gap: 10rem;
+    margin-top: 7.97rem;
+    padding: 0 10.31rem;
+  }
+  
+  
+  /* products display section */
+  /* 
+  .home-shop {
+    height: 17.75rem;
+    display: grid;
+    grid-template-columns: repeat(3, 21.875rem);
+    column-gap: 1.88rem;
+    position: relative;
+  }
+  
+  .product-xx99II, .product-zx9, .product-yx1 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .product-xx99II {
+    grid-column: 1;
+  }
+  
+  .product-zx9 {
+    grid-column: 2;
+  }
+  
+  .product-yx1 {
+    grid-column: 3;
+  }
+  
+  .product {
+    width: 7.6489rem;
+    height: 10rem;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+  }
+  
+  
+  .shop-content {
+    width: 21.875rem;
+    height: 12.25rem;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.94rem;
+    border-radius: 0.5rem;
+    background-color: #F1F1F1;
+  }
+  
+  .shop-spec {
+    font-size: 1.125rem;
+    letter-spacing: 0.08038rem;
+  }
+  
+  .shop-links {
+    font-size: 0.8125rem;
+    letter-spacing: 0.0625rem;
+  }
+  
+  /* advertising section  */
+  
+  .advertised {
+    grid-row: 2;
+    display: grid;
+    gap: 2.5rem;
+  }
+  
+  /* zx9 graphic display ad */
+  
+  .zx9-display{
+    height: 35rem;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 0.5rem;
+    background-color: #D87D4A
+  }
+  
+  .speaker-photo {
+    grid-column: 1;
+    bottom: -.5rem;
+    left: 8.34rem;
+  }
+  
+  .zx9-content {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .ad-title {
+    font-size: 3.5rem;
+    line-height: 3.625;
+    letter-spacing: 0.125rem;
+    color: #fff;
+  }
+  
+  .zx9-btn {
+    width: 10rem;
+    height: 3rem;
+    margin-top: 1rem;
+    border: none;
+    font-size: 0.8125rem;
+    letter-spacing: 0.0625rem;
+    color: #fff;
+  }
+  
+  .zx9-btn:hover {
+    background-color: #4C4C4C;
+  }
+  
+  .zx7-display {
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    background-image: url(/assets/home/desktop/image-speaker-zx7.jpg);
+    background-repeat: no-repeat;
+  }
+  
+  .yx1-display {
+    grid-row: 3;
+    display: flex;
+    gap: 1.625rem;
+    height: 20rem;
+  }
+  
+  .zx7-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 7.98rem;
+  }
+  
+  .yx1-content {
+    grid-row: 3;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 33.75rem;
+    padding-left: 5.94rem;
+    border-radius: 0.5rem;
+    background-color: #F1F1F1;
+  }
+  
+  .yx1-title {
+    font-size: 1.75rem;
+  
+    letter-spacing: 0.125rem;
+  }
+  
+  .zx7-title, .yx1-title {
+    font-size: 1.75rem;
+    letter-spacing: 0.125rem;
+  }
+  
+  .earphone-photo {
+    width: 33.75rem;
+    height: 20rem;
+    border-radius: 0.5rem;
+  }
+  
+  .product-btn {
+    width: 10rem;
+    height: 3rem;
+    border: 1px solid #000;
+    background-color: transparent;
+    font-size: 0.8125rem;
+  
+    letter-spacing: 0.0625rem;
+  }
+  
+  .product-btn:hover {
+    background-color: #000; 
+    color: #fff;
+  }
+  
+  /* audio hero content  */
+  
+  .audio-content {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 33.75rem 33.75rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .hero-content {
+    width: 27.8125rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+    letter-spacing: 0.08931rem;
+  }
+  
+  .hero-about {
+    padding-right: .5rem;
+  }
+  
+  .best-gear {
+    border-radius: 0.5rem;
+  }
+  
+  /* footer */
+  
+  .footer {
+    width: 90rem;
+    height: 22.8125rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3.5rem;
+    padding: 0 10.31rem;
+    background-color: #101010;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+    gap: 2.5rem;
+  }
+  
+  .footer-hero {
+    width: 33.75rem;
+    height: 6.25rem;
+  }
+  
+  .social-media {
+    gap: 1.75rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-media img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  /* headphones page */
+  
+  .products-header {
+    width: 90rem;
+    height: 21rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6.12rem;
+    padding-top: 2.19rem;
+    background-color: #0E0E0E;
+  }
+  
+  .product-nav {
+    width: 69.385rem;
+    grid-row: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .products-title {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+    letter-spacing: 0.08931rem;
+    color: #fff;
+  }
+  
+  /* headphones display */
+  
+  .products-page {
+    display: grid;
+    grid-template-rows: repeat(3, 35rem);
+    grid-template-columns: 33.75rem 33.75rem;
+    grid-row-gap: 10rem;
+    grid-column-gap: 1.88rem;
+  }
+  
+  .xx99II {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .xx99I {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .xx59 {
+    grid-row: 3;
+    grid-column: 1 / span 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .product-img {
+    width: 33.75rem;
+    border-radius: 0.5rem;
+  }
+  
+  .product-info {
+    width: 27.1825rem;
+    height: 21.4375rem;
+    display: grid;
+  }
+  
+  .new-product {
+    font-size: 0.8755rem;
+    letter-spacing: 0.625rem;
+    color: #D87D4A;
+  }
+  
+  .product-name {
+    font-size: 2.5rem;
+  
+    letter-spacing: 0.08931rem;
+    line-height: 2.75rem;
+  }
+  
+  .product-content {
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+    opacity: 0.5;
+  }
+  
+  
+  
+  /* speakers page */
+  
+  .speakers-page {
+    display: grid;
+    grid-template-rows: 35rem 35rem;
+    grid-template-columns: 33.75rem 33.75rem;
+    grid-row-gap: 10rem;
+    grid-column-gap:1.88rem;
+  }
+  
+  .zx9-speaker {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .zx7-speaker {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* earphones page  */
+  
+  .earphones-page {
+    display: grid;
+    grid-template-rows: 35rem;
+    grid-template-columns: 33.75rem 33.75rem;
+    grid-row-gap: 10rem;
+    grid-column-gap:1.88rem;
+  }
+  
+  .yx1 {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* headphone-1 page  */
+  
+  .shop-xx99II {
+    width: 90rem;
+    height: 6.0625rem;
+    display: flex;
+    align-items: center;
+    padding: 0 10.31rem;
+    background-color: #000;
+  }
+  
+  .headphone-nav {
+    width: 69.385rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .headphone-nav-list {
+    gap: 2.125rem;
+    display: flex;
+  }
+  
+  .headphone-nav-list li {
+    display: flex;
+  }
+  
+  .feature {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    display: grid;
+    grid-template-rows: 5.06rem 35rem;
+    grid-template-columns: 33.75rem 27.84375rem;
+    grid-column-gap: 7.81rem;
+    align-items: center;
+    position: relative;
+  }
+  
+  .back-btn {
+    grid-row: 1;
+    grid-column: 1;
+    position: absolute;
+    top: 0;
+    color: #000;
+  }
+  
+  .back-btn:hover {
+    color: #D87D4A;
+  }
+  
+  .featured-img {
+    grid-row: 2;
+    grid-column: 1;
+    width: 33.75rem;
+    border-radius: 0.5rem;
+  }
+  
+  .feature-info {
+    height: 25.4375rem;
+    grid-row: 2;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .feature-title {
+    margin: 1rem 0 2rem 0;
+    font-size: 2.5rem;
+    letter-spacing: 0.08931rem;
+    line-height: 2.75rem;
+  }
+  
+  .product-price {
+    margin: 2rem 0 2.94rem 0;
+  }
+  
+  .add-cart {
+    width: 21rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .add-product {
+    width: 7.5rem;
+    height: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #F1F1F1;
+  }
+  
+  .add-btn {
+    border: none;
+  }
+  
+  .increment {
+    width: 1rem;
+    display: flex;
+    border: none;
+    text-align: center;
+    background-color: #F1F1F1;
+  }
+  
+  .cart-btn {
+    width: 10rem;
+    height: 3rem;
+    border: none;
+    background-color: #D87D4A;
+    color: #fff;
+  }
+  
+  .hero-feature {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    display: grid;
+    grid-template-rows: 19.875rem;
+    grid-template-columns: 39.6875rem 21.875rem;
+    justify-content: space-between;
+  }
+  
+  .hero-feature-content {
+    grid-row: 1;
+    grid-column: 1;
+    display: grid;
+    gap: 2rem;
+  }
+  
+  .hero-feature-info, .feature-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .hero-feature-info {
+    width: 39rem;
+    height: 15.625rem;
+  }
+  
+  .feature-box-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: count;
+  }
+  
+  .feature-box-list li {
+    display: flex;
+    gap: 1.5rem;
+    counter-increment: count;
+  }
+  
+  .feature-box-list li:before {
+    content: counter(count) "x";
+    color: #D87D4A;
+  }
+  
+  
+  .feature-images {
+    grid-row: 3;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 27.81rem 39.69rem;
+    gap: 1.88rem;
+  }
+  .listen, .table, .feature-markII {
+    border-radius: 0.5rem;
+  }
+  
+  .listen {
+    grid-row:1;
+    grid-column: 1;
+  }
+  
+  .table {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  
+  .feature-markII {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+  }
+  
+  .shop-other {
+    grid-row: 4;
+    display: grid;
+    grid-template-rows: 6.25rem 29.4375rem;
+    grid-template-columns: repeat(3, 21.875rem);
+    grid-column-gap: 1.88rem;
+  }
+  
+  .shop-title {
+    grid-row: 1;
+    grid-column: 2;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    letter-spacing: 0.07144rem;
+  }
+  
+  .shop-other img {
+    width: 21.875rem;
+    height: 19.875rem;
+    border-radius: 0.5rem;
+  }
+  
+  .shop-xx99I, .shop-xx59, .shop-zx9 {
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .shop-xx99I {
+    grid-column: 1;
+  }
+  
+  .shop-xx59 {
+    grid-column: 2;
+  }
+  
+  .shop-zx9 {
+    grid-column: 3;
+  }
+  
+  .shop-other p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.10713rem;
+    color: #000;
+    opacity: 1;
+  }
+  
+  .shopping {
+    grid-row: 5;
+    display: grid;
+    grid-template-rows: 17.75rem;
+    grid-template-columns: repeat(3, 21.875rem);
+    gap: 1.88rem;
+  }
+  
+  .shop-audio-content {
+    grid-row: 6;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 33.75rem 33.75rem;
+    align-items: center;
+    justify-content: space-between;
+  } 
+  
